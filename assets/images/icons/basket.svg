@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.983" height="28.983" viewBox="0 0 28.983 28.983">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_42" data-name="Rectangle 42" width="28.983" height="28.983" fill="#580d0d" stroke="#fff" stroke-width="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_2" data-name="Mask Group 2" clip-path="url(#clip-path)">
+    <g id="shopping-cart_1_" data-name="shopping-cart (1)" transform="translate(-0.215 0.388)">
+      <g id="Group_12" data-name="Group 12">
+        <g id="Group_11" data-name="Group 11">
+          <path id="Path_4" data-name="Path 4" d="M13.97,39.669A3.026,3.026,0,1,0,17,42.694,3.026,3.026,0,0,0,13.97,39.669Zm0,4.707a1.681,1.681,0,1,1,1.681-1.681A1.681,1.681,0,0,1,13.97,44.375Z" transform="translate(-4.725 -17.513)" stroke="#fff" stroke-width="0.5"/>
+          <path id="Path_5" data-name="Path 5" d="M36.451,39.669a3.026,3.026,0,1,0,3.026,3.026A3.026,3.026,0,0,0,36.451,39.669Zm0,4.707a1.681,1.681,0,1,1,1.681-1.681A1.681,1.681,0,0,1,36.451,44.375Z" transform="translate(-14.43 -17.513)" stroke="#fff" stroke-width="0.5"/>
+          <path id="Path_6" data-name="Path 6" d="M28.846,5.188a.841.841,0,0,0-.538-.269l-21.887-.3L5.816,2.767A3.093,3.093,0,0,0,2.925.683H.672a.672.672,0,0,0,0,1.345H2.925A1.748,1.748,0,0,1,4.539,3.2l4.27,12.877-.336.773a3.227,3.227,0,0,0,.3,2.925A3.127,3.127,0,0,0,11.3,21.191H24.375a.672.672,0,0,0,0-1.345H11.3a1.715,1.715,0,0,1-1.412-.807,1.849,1.849,0,0,1-.168-1.614l.269-.605,14.154-1.479a3.7,3.7,0,0,0,3.194-2.824l1.614-6.758A.572.572,0,0,0,28.846,5.188Zm-2.824,7.027A2.286,2.286,0,0,1,23.971,14L9.985,15.442,6.859,5.961l20.609.3Z" transform="translate(0 -0.683)" stroke="#fff" stroke-width="0.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
