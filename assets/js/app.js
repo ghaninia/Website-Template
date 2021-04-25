@@ -1,12 +1,9 @@
-(() => {
-    const includes = document.getElementsByTagName('include');
-    [].forEach.call(includes, i => {
-        let filePath = i.getAttribute('src');
-        fetch(filePath).then(file => {
-            file.text().then(content => {
-                i.insertAdjacentHTML('afterend', content);
-                i.remove();
-            });
-        });
+$(function(){
+    $(".slider").slick({
+        rtl : true  ,
+        lazyLoad : "progressive" ,
+        slidesToShow : 1 , 
+        infinite: true ,
+        dots : true 
     });
-})();
+})
