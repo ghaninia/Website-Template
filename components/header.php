@@ -1,15 +1,16 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-5">
                 <div class="logo">
                     <a href="">
                         <h1>3D4DL</h1>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="navbar">
+            <div class="col-lg-7 navbary-container">
+                <div class="navbary">
+                    <div class="close"></div>
                     <ul>
                         <li>
                             <a href="">محصولات</a>
@@ -118,14 +119,25 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col">
                 <div class="toolbar">
                     <ul>
-                        <li>
-                            <a href="">ثبت نام</a>
+                        <li class="visible-xs">
+                            <a class="btn-navbary">
+                                <i class="feather-more-horizontal"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="">ورود</a>
+                            <a href="">
+                                <i class="feather-user-plus"></i>
+                                <span>ثبت نام</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="feather-log-in"></i>
+                                <span>ورود</span>
+                            </a>
                         </li>
                     </ul>
                     <div class="basket">

@@ -1,0 +1,253 @@
+
+
+@media ( max-width : 720px ) {
+    header .toolbar .basket a img {
+        height : 15px; 
+    }
+    .slider .slick-arrow {
+        height : 20px ;
+        width : 20px ;
+        top : calc(50% - 10px) ;
+    }
+    .slider .slick-arrow:after {
+        top: 10px;
+        left: 5px;
+        font-size: 10px;
+    }
+    .slider .slick-dots button {
+        height : 5px;
+        width : 5px ;
+        overflow: hidden ;
+        padding: 0 ;
+    }
+    .slider .slick-dots li {
+        margin : 0 2px 
+    }
+    .slider .slick-dots { 
+        bottom : 10px 
+    }
+    header .toolbar ul > li a span {
+        display: none ;
+    }
+    header .toolbar ul > li a i {
+        display: block  ;
+    }
+
+    header .navbary { 
+        display: block ;
+    }
+    
+    header .navbary-container {
+        display : block !important; 
+        position: fixed ;
+        top : 0 ;
+        right : -100% ;
+        bottom : 0 ;
+        width: 80% ; 
+        z-index: 999;
+        background : var(--white) ;
+        overflow: hidden ;
+        box-shadow: 0 0 40px rgba(0,0,0,0.1);
+        overflow-y: auto;
+        transition: var(--transition) ;
+    }
+
+    header .navbary-container.active { 
+        right: 0 ;
+    }
+
+    header .navbary-container .navbary ul {
+        display : block; 
+        padding : 30px 0 10px; 
+        margin : 0
+    }
+
+    header .navbary-container .navbary ul > li { 
+        display : block ;
+        padding : 5px ; 
+    }
+
+    header .navbary-container .navbary ul > li > a{
+        display: block ;
+        padding: 0 ;
+        font-size: 90% ;
+        color : var(--gray)
+    }
+
+    header .navbary-container .navbary ul > li > .childrens {
+        display: none ;
+        padding : 10px 0 0 0; 
+        font-size: 90% ;
+        position: relative ;
+        top : 0 ;
+        left : 0 ;
+        right:  0 ;
+        bottom: 0 ;
+        margin: 10px 0 0 0 ;
+    }
+
+    header .navbary-container .navbary ul > li > .childrens:after { 
+        content: "";
+        display: block;
+        border: 10px transparent solid;
+        border-bottom-color: var(--default);
+        position: absolute;
+        top: -15px;
+        left: 0;
+        height: 0;
+        width: 0;
+    }
+
+    header .navbary-container .navbary ul > li > .childrens .child img {
+        height : 20px ;
+    }
+
+    header .navbary-container .navbary ul > li > .childrens .child  .title {
+        padding: 5px 0 ;
+    }
+
+    header .navbary-container .navbary ul > li > .childrens .child {
+        border : 0 none ;
+        border-bottom: 1px rgba(0,0,0,.05) solid ;
+        margin : 0 0 10px ;
+    }
+
+    header .navbary-container .navbary ul > li > .childrens .child:nth-last-of-type(1) 
+    {
+        border:  0 none ;
+        padding-bottom: 5px ;
+    }
+
+    header .navbary-container .navbary ul > li > .childrens .child .more {
+        margin : 5px 0 10px
+    }
+
+    header .navbary-container .navbary ul > li > .childrens .child .more a:after { 
+        padding : 0 
+    }
+
+    header .navbary ul > li > .childrens .child ol > li a{ 
+        padding: 2px 0 ;
+    }
+    
+    header .navbary{
+        height: auto ;
+    }
+
+    
+    header .navbary-container .navbary .close{
+        display: block ;
+    }
+
+    header .navbary-container .navbary .close:after {
+        content : "[x] بستن" ;
+        display: block ;
+        position: absolute ;
+        top : 10px ;
+        left : 0 ;
+        font-size: 70% ;
+        color : var(--lightness)
+    }
+
+    .search .dropdown-container .drop{
+        display : none ;
+        position: relative ;
+        top : 0 ;
+        left : 0 ; 
+        right : 0  ; 
+        background : transparent ;
+        padding: 0 ;
+        margin : 10px 0 ;
+        max-height: 100px ;
+        overflow-y : auto ;
+    }
+
+    .search .dropdown-container .title:after {
+        display: none ;
+    }
+
+    .search .dropdown-container .title:before {
+        padding: 0 5px 0 10px;
+    }
+
+    .search .q input[type=text] { 
+        padding: 5px 30px 5px 5px;
+        font-size : 90% !important
+    }
+
+    .categories > ul.nest-0 > li { 
+        width: auto ;
+        padding: 0 10px;
+    }
+
+    .categories > ul.nest-0 > li span.title{
+        white-space: nowrap;
+        padding : 0 5px 
+    }
+
+    .categories > ul.nest-0 > li .icon i {
+        font-size: 20px ;
+    }
+
+    .categories {
+        overflow-x: auto ;
+    }
+
+    .categories > ul.nest-0 {
+        display: flex ;
+        align-items: center ;
+        justify-content: flex-start ;
+    }
+    
+    .categories > ul.nest-0 > li .icon i {
+        font-size: 18px ;
+    }
+
+    .categories > ul.nest-0 > li .childrens{
+        display : block ; 
+        position: fixed ;
+        top : 0 ;
+        bottom : 0 ;
+        right : -100% ;
+        width: 80% ; 
+        z-index: 999;
+        background : var(--white) ;
+        overflow-y: auto;
+        transition: var(--transition) ;
+        box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    }
+    
+    .categories > ul.nest-0 > li .childrens.active {
+        right: 0 ;
+    }
+
+    .categories ul.nest-1 > li .icon i {
+        font-size : 80% 
+    }
+
+    .categories ul.nest-1 .wrap {
+        display: none ; 
+        position: relative ; 
+        width: auto ;
+        right: 0 ;
+        left: 0 ;
+        bottom: 0 ;
+        top : 0 ;
+        background-color: var(--default) ;
+        margin : 10px 0 ;
+        overflow-y: auto ;
+        max-height: 200px ;
+    }
+
+    .categories ul.nest-1 { 
+        width: auto ;
+        padding: 20px;
+    }
+    .categories .wrap ul.nest-2.columns-2{
+        columns: 1 ;
+        -webkit-columns: 1 ;
+    }
+    .categories .wrap ul.nest-2 li a {
+        font-size: 80% ;
+    }
+}

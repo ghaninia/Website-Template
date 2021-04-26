@@ -6,12 +6,27 @@
     --light : #F8F4F4 ;
     --light-hover : #ffffff ;
     --lighter : #EFECEC ;
+    --lightness : #C6C0C0 ;
     --white : #fff ;
     --font : YekanBalkhMedium , tahoma , arial ;
     --font-bold : YekanBalkhHeavy ,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
     --rounded : 5px ;
     --transition: all .3s ease  ;
     --all : "همه"
+}
+
+::-webkit-scrollbar{ 
+    background : #eee ;
+    outline: 0 ;
+    width: 5px ;
+    height: 5px ;
+    border-radius: 0 ;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px ;
+    height: 5px ;
+    background: var(--default) ;  
 }
 
 body {
@@ -44,7 +59,7 @@ a:hover {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: var(--font-bold) ;
+    /* font-family: var(--font-bold) ; */
 }
 
 .columns-2{
@@ -64,12 +79,13 @@ header {
 }
 
 header .logo ,
-header .navbar ,
+header .navbary ,
 header .toolbar {
     display : flex ;
     align-items: center ;
     flex : 1 ; 
     height: 80px ;
+    position: relative;
 }
 
 header .logo {
@@ -80,17 +96,21 @@ header .logo a {
     color : var(--default) !important
 }
 
-header .navbar ul {
+header .navbary ul {
     display : flex ; 
 }
 
-header .navbar ul > li a{
+header .navbary-container .navbary .close { 
+    display: none ;
+}
+
+header .navbary ul > li a{
     display: block ;
     padding: 0 10px ;
 }
 
 
-header .navbar ul > li > .childrens {
+header .navbary ul > li > .childrens {
     display: none ;
     position: absolute ; 
     top : 75px ;
@@ -102,11 +122,11 @@ header .navbar ul > li > .childrens {
     z-index : 99 
 }
 
-header .navbar ul > li:hover > .childrens {
+header .navbary ul > li:hover > .childrens {
     display: flex  ;
 }
 
-header .navbar ul > li > .childrens:after {
+header .navbary ul > li > .childrens:after {
     position: absolute ;
     top : -30px ;
     right : 0px ;
@@ -115,43 +135,43 @@ header .navbar ul > li > .childrens:after {
     content : "" ;
 }
 
-header .navbar ul > li > .childrens .child {
+header .navbary ul > li > .childrens .child {
     flex : 1 1 33.333% ;
     border-left : 1px var(--lighter) solid ;
     padding :0 20px 0;
     text-align: center ;
 }
 
-header .navbar ul > li > .childrens .child:nth-of-type(3)
+header .navbary ul > li > .childrens .child:nth-of-type(3)
 {
     border : 0  
 }
 
-header .navbar ul > li > .childrens .child img{
+header .navbary ul > li > .childrens .child img{
     position: relative;
     color : var(--white);
     height: 50px ;
 }
 
-header .navbar ul > li > .childrens .child .title {
+header .navbary ul > li > .childrens .child .title {
     font-weight: 400 ;
     padding: 20px 0 10px;
     color : var(--white);
 }
 
-header .navbar ul > li > .childrens .child ol {
+header .navbary ul > li > .childrens .child ol {
     margin: 0 ;
     padding : 0 
 }
 
-header .navbar ul > li > .childrens .child ol > li a {
+header .navbary ul > li > .childrens .child ol > li a {
     color : var(--white) ;
     font-size: 90% ;
     text-align: center ;
     padding: 8px 0 ;
 }
 
-header .navbar ul > li > .childrens .child .more {
+header .navbary ul > li > .childrens .child .more {
     display: flex ;
     margin:  20px 0 0;
     align-items: center ;
@@ -159,11 +179,11 @@ header .navbar ul > li > .childrens .child .more {
     flex-direction: column;
 }
 
-header .navbar ul > li > .childrens .child .more a {
+header .navbary ul > li > .childrens .child .more a {
     color : var(--white);
     font-size: 90% ;
 }
-header .navbar ul > li > .childrens .child .more a:after{
+header .navbary ul > li > .childrens .child .more a:after{
     content : "\e92f" ;
     font-family: 'feather' !important ;
     padding: 0 10px;
@@ -171,7 +191,7 @@ header .navbar ul > li > .childrens .child .more a:after{
     top : 2px 
 }
 
-header .navbar ul > li > .childrens ol.columns-2 {
+header .navbary ul > li > .childrens ol.columns-2 {
     background: linear-gradient(90deg, transparent 50% , var(--lighter), transparent 51%);
 }
 
@@ -193,24 +213,27 @@ header .toolbar ul > li {
 header .toolbar ul > li a {
     display: block ;
 }
+header .toolbar ul > li a i {
+    display: none ;
+}
 
-header .toolbar ul > li:nth-of-type(1){
+header .toolbar ul > li:nth-of-type(2){
     background-color: var(--default) ;
 }
 
-header .toolbar ul > li:nth-of-type(1) a {
+header .toolbar ul > li:nth-of-type(2) a {
     color : var(--white);
 }
 
-header .toolbar ul > li:nth-of-type(1):hover {
+header .toolbar ul > li:nth-of-type(2):hover {
     background: var(--default-hover) ;
 }
 
-header .toolbar ul > li:nth-of-type(2):hover {
+header .toolbar ul > li:nth-of-type(3):hover {
     background: var(--light) ;
 }
 
-header .toolbar ul > li:nth-of-type(2):hover a {
+header .toolbar ul > li:nth-of-type(3):hover a {
     color : var(--gray) 
 }
 
@@ -369,7 +392,6 @@ header .toolbar .basket a:after {
     padding : 0 5px ;
 }
 
-
 .categories > ul.nest-0 > li:nth-last-child(1)
 {
     border : none ;
@@ -430,6 +452,7 @@ header .toolbar .basket a:after {
     background: var(--default) ;
     flex-wrap: wrap;
     min-height: 100px ;
+    z-index: 99 ;
 }
 
 .categories > ul.nest-0 > li:hover .childrens {
@@ -563,4 +586,262 @@ ul.nest-1 .has-childrens:after{
     top: 0;
     bottom: 0;
     width: 100px;
+}
+
+.search { 
+    display: block ;
+    background : var(--light) ;
+    margin: 20px 0 ;
+    padding : 10px ;
+}
+
+.search .dropdown-container {
+    display: block ;
+    margin: 5px 0 0 0 ;
+    position: relative;
+}
+
+.search .dropdown-container .title {
+    display : flex ; 
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.search .dropdown-container .title:after {
+    content : "" ;
+    display: block ;
+    position: absolute ;
+    top : 5px ;
+    bottom : 5px ;
+    left : 0 ;
+    width : 1px ; 
+    background : var(--default) ;
+}
+
+.search .dropdown-container .title:before { 
+    content : "\e98f" ;
+    font-family: 'feather';
+    padding : 0 0 0 10px ;
+}
+
+.search .q {
+    position: relative;
+    display: block;
+}
+
+.search .q input[type=text] {
+    display: block ; 
+    border : 0 none ; 
+    outline: 0 transparent;
+    padding: 5px 40px 5px 5px ;
+    width: 100% ;
+    background: transparent ;
+}
+
+.search .q:after { 
+    content : "\e9c1" ;
+    font-family: 'feather';
+    position: absolute ;
+    top : 5px ;
+    right : 5px ;
+    display: block ;
+}
+.search .dropdown-container .drop{
+    display : none;
+    position: absolute ;
+    top : calc( 100% + 15px ) ;
+    left : 0 ; 
+    right : -10px ; 
+    background : var(--light)  ;
+    padding: 10px 0 ;
+    z-index: 99 ;
+}
+
+.search .dropdown-container .drop:after { 
+    content : " " ;
+    display: block ; 
+    height: 15px ;
+    top : -15px ; 
+    left : 0 ;
+    right : 0 ;
+    position: absolute  ;
+}
+
+.search .dropdown-container:hover .drop {
+    display: block ;
+}
+
+.search .drop label { 
+    display: block ;
+    padding : 5px 10px ; 
+    margin:  0 ;
+    font-size: 90% ;
+    position: relative ;
+    z-index: 1 ;
+    transition: var(--transition) ;
+}
+.search .drop label input:after {
+    content : "" ;
+    position: absolute ; 
+    top : 0 ;
+    left : 0 ; 
+    bottom : 0 ;
+    right : 0 ;
+    background: var(--lightness);
+    z-index: -1 ;
+    opacity: 0 ;
+    transition: var(--transition) ;
+}
+.search .drop label input {
+    height: 0 ;
+    width: 0 ;
+}
+.search .drop label input:checked:after
+{
+    opacity: 1 ;
+}
+.search .drop label:hover { 
+    background : var(--lighter)
+}
+
+.tagmount{
+    display : block; 
+    background-color: var(--default) ; 
+    color : #fff ; 
+    padding : 5px ;
+    text-align: center ;
+    margin : 0 ;
+}
+
+.filters{
+    display: block;
+    overflow: hidden ;
+}
+
+.filters .filter {
+    display: block ;
+    padding: 15px 5px 30px ;
+    position: relative ;
+}
+
+.filters .filter:after {
+    content : "";
+    display: block ;
+    height: 1px ;
+    position: absolute ;
+    bottom: 5px ;
+    left: 30px ;
+    right: 30px ;
+    background : var(--light) ;
+}
+
+.filters .filter .filter-body label.checkbox {
+    display: flex ;
+    align-items: center ;
+    padding: 5px 0 ;
+    position: relative;
+    cursor: pointer;
+}
+
+.filters .filter .filter-body label.checkbox input[type=checkbox] {
+    display: block ;
+    width: 0 ;
+    height: 0 ;
+} 
+
+.filters .filter .filter-body label.checkbox input:after {
+    display: block;
+    content : "" ; 
+    height: 15px;
+    width: 15px ;
+    background: var(--light) ;
+    border : 1px var(--lighter) solid ; 
+    position: absolute ;
+    top : 7px ;
+    left : 0 ;
+    transition: var(--transition);
+}
+
+.filters .filter .filter-body label.checkbox input:checked:after {
+    background: var(--default) !important ;
+    border : var(--default) !important ;
+}
+
+.filters .filter .filter-body label.checkbox input:checked:before {
+    position: absolute;
+    z-index: 9;
+    top: 5px;
+    left: 1px;
+    content: "\e92b";
+    font-family: 'feather';
+    color: #fff;
+}
+
+.filters .filter .title { 
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+}
+
+
+.filters .filter .title .desc {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+}
+
+
+.filters .filter .title .checkbox {
+    flex : 1 1 50% ;
+    height: 30px;
+}
+
+.filters .filter .title .icon {
+    display: flex ;
+    align-items: center;
+    justify-content: flex-start;
+    height : 25px ;
+    width : 35px ;
+    position: relative;
+}
+
+.filters .filter .title .icon:after {
+    content : var(--all) ;
+    display : flex ;
+    align-items: center ;
+    justify-content: center ; 
+    position: absolute ;
+    top : 0 ;
+    bottom: 0 ;
+    left: 0 ;
+    right: 0 ;
+    transition: var(--transition); 
+    font-size: 90% ;
+    background: var(--white) ;
+    padding : 3px 0 0 0 ;
+    color : var(--default) ;
+    visibility: hidden ;
+    opacity: 0 ;
+}
+
+.filters .filter .title:hover .icon:after {
+    visibility: visible ;
+    opacity: 1 ;
+}
+
+.filters .filter li.has-children > .title .desc:after {
+    content : "\e92f" ;
+    display: block ;
+    font-family: 'feather';
+    margin-right: 10px;
+}
+
+.filters .filter li.has-children ul.childrens {
+    padding : 0 ;
+    display: none ;
+}
+
+.filters .filter li.has-children.active > .title .desc:after{
+    content : "\e92e"
 }
