@@ -209,6 +209,7 @@
         top : 0 ;
         bottom : 0 ;
         right : -100% ;
+        left : inherit !important ;
         width: 80% ; 
         z-index: 999;
         background : var(--white) ;
@@ -249,5 +250,22 @@
     }
     .categories .wrap ul.nest-2 li a {
         font-size: 80% ;
+    }
+    
+    footer .partiations {
+        display: block  ;
+        padding:  10px  ;
+    }
+
+    footer .partiation {
+        border : 0 none ;
+        border-bottom: 1px rgba(255,255,255,.1) solid;
+        padding : 20px 0; 
+    }
+    footer .menu ul li  {
+        text-align: center ;
+    }
+    .radio-group {
+        margin: 0 0 5px;
     }
 }

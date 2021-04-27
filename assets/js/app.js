@@ -65,3 +65,7 @@ $(function () {
     });
 
 });
+
+$(".products .product a.preview").click(function(e){
+    e.preventDefault() ;
+})
