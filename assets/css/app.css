@@ -11,6 +11,7 @@
     --white : #fff ;
     --font : YekanBalkhMedium , tahoma , arial ;
     --font-bold : YekanBalkhHeavy ,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    --font-logo : 'BigJohnRegular' ;
     --rounded : 5px ;
     --transition: all .3s ease  ;
     --all : "همه"
@@ -34,7 +35,7 @@ body {
     direction: rtl ;
     text-align: right ;
     color : var(--gray) ;
-    font-size : 14px ;
+    font-size : 16px ;
     font-family: var(--font) ;
     letter-spacing: -.5px ;
 }
@@ -57,10 +58,6 @@ a {
 
 a:hover {
     color : var(--gray) ;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: var(--font-bold) ;
 }
 
 .columns-2{
@@ -91,10 +88,17 @@ header .toolbar {
 
 header .logo {
     color : var(--default) ;
-    padding : 15px 0 0 0 
+    padding :  0 ;
+    font-family:  var(--font-logo) !important ;
+    position: relative;
+    top : -3px ;
 }
+
 header .logo a {
-    color : var(--default) !important
+    color : var(--default) !important ;
+}
+header .logo a h1 {
+    font-size : 50px ;
 }
 
 header .navbary ul {
@@ -107,7 +111,7 @@ header .navbary-container .navbary .close {
 
 header .navbary ul > li a{
     display: block ;
-    padding: 0 10px ;
+    padding: 0 5px ;
 }
 
 
@@ -389,7 +393,7 @@ header .toolbar .basket a:after {
     display : block ;
     border-left : 1px var(--light) solid ;
     text-align: center ;
-    width: 70px ;
+    width: 90px ;
     padding : 0 5px ;
 }
 
@@ -400,18 +404,17 @@ header .toolbar .basket a:after {
 
 .categories > ul.nest-0 > li > a {
     color : var(--gray) ;
-    font-size : 80% ;
 }
 
 .categories > ul.nest-0 > li .icon {
     position: relative ;
-    height: 30px ;
+    height: 50px ;
     display: block ;
     overflow: hidden ;
 }
 
 .categories > ul.nest-0 > li .icon i{
-    font-size : 30px ;
+    font-size : 50px ;
 }
 
 
@@ -600,7 +603,8 @@ ul.nest-1 .has-childrens:after{
     display: block ;
     background : var(--light) ;
     margin: 20px 0 ;
-    padding : 10px ;
+    padding : 20px;
+    font-size : 18px 
 }
 
 .search .dropdown-container {
@@ -717,7 +721,7 @@ ul.nest-1 .has-childrens:after{
     display : block; 
     background-color: var(--default) ; 
     color : #fff ; 
-    padding : 5px ;
+    padding : 12px ;
     text-align: center ;
     margin : 0 ;
     border-radius: var(--rounded) ;
@@ -780,11 +784,12 @@ ul.nest-1 .has-childrens:after{
 .filters .filter .filter-body label.checkbox input:checked:before {
     position: absolute;
     z-index: 9;
-    top: 5px;
-    left: 1px;
+    top: 4px;
+    left: 0;
     content: "\e92b";
     font-family: 'feather';
     color: #fff;
+    font-size: 90%;
 }
 
 .filters .filter .title { 
@@ -868,8 +873,8 @@ ul.nest-1 .has-childrens:after{
     display: block ;
     position: relative; 
     background: var(--light);
-    padding : 5px 15px ;
-    margin: 0 0 0 4px ;
+    padding : 8px 15px ;
+    margin: 3px 0 0 4px ;
     border-radius: var(--rounded) ;
     overflow: hidden ;
     z-index: 2 ;
@@ -940,7 +945,7 @@ ul.nest-1 .has-childrens:after{
     background: transparent ;
     border : 0 ;
     outline: 0 ;
-    height: 30px ;
+    height: 40px ;
     padding : 0 10px 0 40px;
     -webkit-appearance: none;
     color : var(--gray-hover) ;
@@ -1019,6 +1024,18 @@ ul.nest-1 .has-childrens:after{
     display: block; 
 }
 
+@media (min-width: 1400px) {
+    .products .product {
+        width: calc(14.2% - 10px);
+    }
+}
+
+@media (max-width: 1400px) {
+    .products .product {
+        width: calc(16.6666% - 10px);
+    }
+}
+
 @media (max-width: 1200px) {
     .products .product {
         width: calc(20% - 10px);
@@ -1027,27 +1044,19 @@ ul.nest-1 .has-childrens:after{
 
 @media (max-width: 992px) {
     .products .product {
-        width: calc(20% - 10px);
-    }
-}
-@media (max-width: 768px) {
-    .products .product {
         width: calc(25% - 10px);
     }
 }
+
+@media (max-width: 768px) {
+    .products .product {
+        width: calc(33.33333% - 10px);
+    }
+}
+
 @media (max-width: 576px) {
     .products .product {
         width: calc(50% - 10px);
-    }
-}
-@media (max-width: 420px ) {
-    .products .product {
-        width: calc(50% - 10px);
-    }
-}
-@media (min-width: 1400px) {
-    .products .product {
-        width: calc(16.666% - 10px);
     }
 }
 
@@ -1103,7 +1112,7 @@ ul.nest-1 .has-childrens:after{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row ;
+    flex-direction: row-reverse;
 }
 
 .pagination-next-prev {
@@ -1256,6 +1265,7 @@ footer .menu ul li a:hover {
 
 footer .about .logo a{
     color : var(--white) ;
+    font-family:  var(--font-logo) !important ;
 }
 
 footer .about {
@@ -1277,4 +1287,19 @@ footer .about ul li a {
 footer .about ul li a:hover{
     background: var(--default) ;
     color : var(--white)
+}
+
+.ui-tooltip {
+    color: white;
+    overflow: hidden ;
+    box-shadow: 0 0 0 ;
+    background: var(--white) ;
+    padding: 10px ;
+    box-shadow: 0 0 10px rgba(0,0,0,.1) !important;
+    border : 0 !important;
+}
+
+.ui-tooltip img {
+    height: auto ;
+    width: 100% ;
 }

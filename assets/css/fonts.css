@@ -1,4 +1,11 @@
 @font-face {
+    font-family: 'BigJohnRegular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Big John Regular'), url('../fonts//bigjohn/bigjohn.woff') format('woff');
+}
+
+@font-face {
     font-family: YekanBalkhHeavy ;
     src: url(../fonts/yekanbakhheavy/yekanbakhheavy.eot);
     src: url(../fonts/yekanbakhheavy/yekanbakhheavy.eot) format('embedded-opentype'),

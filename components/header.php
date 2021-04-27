@@ -1,14 +1,14 @@
 <header>
-    <div class="container">
+    <div class="container-xxl">
         <div class="row">
-            <div class="col-lg-2 col-5">
+            <div class="col-md-2 col-lg-2 col-xxl-2 col-sm-6 col">
                 <div class="logo">
                     <a href="">
                         <h1>3D4DL</h1>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-7 navbary-container">
+            <div class="col-md-6 col-lg-7 navbary-container">
                 <div class="navbary">
                     <div class="close"></div>
                     <ul>
@@ -119,10 +119,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col">
+            <div class="col-md-4 col-lg-3 col-sm-6 col">
                 <div class="toolbar">
                     <ul>
-                        <li class="visible-xs">
+                        <li class="visible-sm">
                             <a class="btn-navbary">
                                 <i class="feather-more-horizontal"></i>
                             </a>

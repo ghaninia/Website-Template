@@ -26,6 +26,107 @@
     .slider .slick-dots { 
         bottom : 10px 
     }
+
+    .search .dropdown-container .drop{
+        display : none ;
+        position: relative ;
+        top : 0 ;
+        left : 0 ; 
+        right : 0  ; 
+        background : transparent ;
+        padding: 0 ;
+        margin : 10px 0 ;
+        max-height: 100px ;
+        overflow-y : auto ;
+    }
+
+    .search .dropdown-container .title:after {
+        display: none ;
+    }
+
+    .search .dropdown-container .title:before {
+        padding: 0 5px 0 10px;
+    }
+
+    .search .q input[type=text] { 
+        padding: 5px 30px 5px 5px;
+        font-size : 90% !important
+    }
+
+    .categories > ul.nest-0 > li { 
+        width: auto ;
+        padding: 0 10px;
+    }
+
+    .categories > ul.nest-0 > li span.title{
+        white-space: nowrap;
+        padding : 0 5px 
+    }
+
+    .categories > ul.nest-0 > li .icon i {
+        font-size: 20px ;
+    }
+
+    .categories {
+        overflow-x: auto ;
+    }
+
+    .categories > ul.nest-0 {
+        display: flex ;
+        align-items: center ;
+        justify-content: flex-start ;
+    }
+    
+    .categories > ul.nest-0 > li .icon i {
+        font-size: 18px ;
+    }
+    
+    footer .partiations {
+        display: block  ;
+        padding:  10px  ;
+    }
+
+    footer .partiation {
+        border : 0 none ;
+        border-bottom: 1px rgba(255,255,255,.1) solid;
+        padding : 20px 0; 
+    }
+    footer .menu ul li  {
+        text-align: center ;
+    }
+    .radio-group {
+        margin: 0 0 5px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    
+    .filters .filter{
+        padding :15px 5px 10px
+    }
+    
+    .filter-title {
+        display: block ;
+        background-color:var(--default) ;
+        padding : 10px 10px 1px ;
+        margin : 0 0 10px 0 ; 
+        border-radius: var(--rounded) ; 
+        color : var(--white );
+        position: relative;
+    }
+    .filter-title:after {
+        content : "\e98f";
+        font-family: 'feather';
+        position: absolute ;
+        top : 5px ;
+        left : 10px  ;
+        color : var(--white)
+    }
+
+    .filter .filter-body{
+        display: none ;
+    }
+
     header .toolbar ul > li a span {
         display: none ;
     }
@@ -149,60 +250,6 @@
         color : var(--lightness)
     }
 
-    .search .dropdown-container .drop{
-        display : none ;
-        position: relative ;
-        top : 0 ;
-        left : 0 ; 
-        right : 0  ; 
-        background : transparent ;
-        padding: 0 ;
-        margin : 10px 0 ;
-        max-height: 100px ;
-        overflow-y : auto ;
-    }
-
-    .search .dropdown-container .title:after {
-        display: none ;
-    }
-
-    .search .dropdown-container .title:before {
-        padding: 0 5px 0 10px;
-    }
-
-    .search .q input[type=text] { 
-        padding: 5px 30px 5px 5px;
-        font-size : 90% !important
-    }
-
-    .categories > ul.nest-0 > li { 
-        width: auto ;
-        padding: 0 10px;
-    }
-
-    .categories > ul.nest-0 > li span.title{
-        white-space: nowrap;
-        padding : 0 5px 
-    }
-
-    .categories > ul.nest-0 > li .icon i {
-        font-size: 20px ;
-    }
-
-    .categories {
-        overflow-x: auto ;
-    }
-
-    .categories > ul.nest-0 {
-        display: flex ;
-        align-items: center ;
-        justify-content: flex-start ;
-    }
-    
-    .categories > ul.nest-0 > li .icon i {
-        font-size: 18px ;
-    }
-
     .categories > ul.nest-0 > li .childrens{
         display : block ; 
         position: fixed ;
@@ -251,21 +298,37 @@
     .categories .wrap ul.nest-2 li a {
         font-size: 80% ;
     }
-    
-    footer .partiations {
-        display: block  ;
-        padding:  10px  ;
-    }
 
-    footer .partiation {
-        border : 0 none ;
-        border-bottom: 1px rgba(255,255,255,.1) solid;
-        padding : 20px 0; 
+}
+
+@media ( min-width : 720px ) and (max-width: 960px){
+    .filters .filter .filter-body label.checkbox input:checked:before {
+        top: 5px;
+        font-size: 80%;
     }
-    footer .menu ul li  {
-        text-align: center ;
+    .filters .filter .title {
+        flex: 1 1 80%;
     }
-    .radio-group {
-        margin: 0 0 5px;
+    .filters .filter .title .checkbox {
+        flex: 1 1 20%;
     }
+    .has-children .childrens span {
+        font-size : 80% 
+    }
+}
+
+@media( max-width : 980px ) and ( min-width : 720px )
+{
+    .categories > ul.nest-0 {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .categories > ul.nest-0 > li {
+          flex: 1 1 10% ;
+          margin: 10px;
+      }
+      .childrens .has-children .title > .desc span {
+          font-size : 80% ;
+      }
 }

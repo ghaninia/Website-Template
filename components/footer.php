@@ -1,5 +1,5 @@
 <footer>
-    <div class="container">
+    <div class="container-xxl">
         <div class="partiations">
             <div class="partiation contactus">
                 <h1>ارتباط با ما</h1>

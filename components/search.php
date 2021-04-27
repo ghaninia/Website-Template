@@ -3,7 +3,7 @@
         <form action="">
             <div class="search">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-4">
                         <div class="dropdown-container">
                             <div class="title">
                                 <span>دسته بندی</span>
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 col-sm-8">
                         <div class="q">
                             <input type="text" name="q" placeholder="دنبال چه چیزی میگردید ؟">
                         </div>
